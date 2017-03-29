@@ -1284,7 +1284,7 @@ class Mul(Expr, AssocOp):
         from sympy.simplify.radsimp import radsimp, fraction
         from sympy.core.exprtools import Factors
         
-        is_integer = self.is_integer
+        is_integer = True #set equal to True so it always goes through logic
 
         if is_integer:
             coeff,args = self.as_coeff_mul()
